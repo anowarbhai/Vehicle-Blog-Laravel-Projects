@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vehicle Blog Admin Panel</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="..//assets/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="..//assets/dist/css/adminlte.min.css?v=3.2.0">
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-decoration: underline;">Visit Website</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../profile/update.html"><i class="far fa-user"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="../index.html" class="brand-link">
+                <span class="brand-text font-weight-light">Blog CPanel</span>
+            </a>
+
+            <div class="sidebar">
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Blog
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../post/index.html" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Post List</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../post/create.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add New Post</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Category
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../category/index.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Category List</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../category/create.html" class="nav-link ">
+                                       <i class="far fa-circle nav-icon"></i>
+                                       <p>Add Category</p>
+                                    </a>
+                                 </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Pages
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="privacy-policy.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Privacy Policy</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="terms-conditions.html" class="nav-link ">
+                                       <i class="far fa-circle nav-icon"></i>
+                                       <p>Terms & Conditions</p>
+                                    </a>
+                                 </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Role & Permissions
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                              <li class="nav-item">
+                                    <a href="../systemusers/index.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Users Role</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../systemusers/index.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>System Users</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../setting.html" class="nav-link">
+                               <i class="nav-icon fas fa-th"></i>
+                               <p>
+                                  Web Setting
+                                  <span class="right badge badge-danger">New</span>
+                               </p>
+                            </a>
+                         </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Terms & Conditions</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item ">Terms & Conditions</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Terms & Conditions</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="Title">Page Title</label>
+                                            <input type="text" class="form-control" id="Title" placeholder="title">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pagebody">Page Body</label>
+                                            <textarea name="pagebody" id="pagebody" class="form-control" placeholder="page body" rows="10"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="metatitle">Meta Title</label>
+                                            <input type="text" class="form-control" name="metatitle" id="metatitle" placeholder="meta title">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="meta_desc">Meta Description</label>
+                                            <textarea name="meta_desc" id="meta_desc" placeholder="meta desc" class="form-control" rows="2"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="meta_keywords">Meta Keywords</label>
+                                            <input type="text" class="form-control" name="meta_keywords" id="meta_keywords" placeholder="meta keywords">
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+
+
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <div class="p-3">
+                <h5>Title</h5>
+                <p>Sidebar content</p>
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-inline">
+                Anything you want
+            </div>
+            <strong>Copyright &copy; 2014-2025 <a href="mdrony.tech">mdrony.tech</a>.</strong> All rights reserved.
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables & Plugins -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="..//assets/plugins/jquery/jquery.min.js"></script>
+<script src="..//assets/plugins/fontawesome-free/js/font-awesome.min.js"></script>
+
+<script src="..//assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="..//assets/dist/js/adminlte.min.js?v=3.2.0"></script>
+    <!-- Page specific script -->
+    <script>
+        $(function () {
+            let table = new DataTable('#postlist');
+        });
+    </script>
+</body>
+</html>
+
